@@ -2,6 +2,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	font-family: sans-serif;
+	width: 360px;
+	height: 360px;
+	font-size: 30px;
 }
 
 th,
