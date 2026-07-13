@@ -71,3 +71,7 @@ input:valid + .icon::after {
 	content: "✓";
 	padding-left: 1px;
 }
+
+.icon-v {
+	accent-color: red;
+}
