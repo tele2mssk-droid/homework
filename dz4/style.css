@@ -1,0 +1,73 @@
+body {
+	font-family: sans-serif;
+}
+
+button {
+	border-radius: 9px;
+	text-align: center;
+	background-color: #d7d7d7;
+}
+
+button:hover {
+	background-color: #a9a9a9;
+	cursor: pointer;
+}
+
+label {
+	display: block;
+}
+
+input {
+	border-radius: 9px;
+	border-width: 2px;
+}
+
+textarea {
+	border-radius: 9px;
+	resize: vertical;
+	min-height: 30px;
+	max-height: 150px;
+	border-width: 2px;
+}
+
+textarea,
+input,
+label {
+	margin: 3px 0;
+}
+
+fieldset {
+	background: #2a7b9b;
+	background: linear-gradient(
+		145deg,
+		rgba(42, 123, 155, 1) 0%,
+		rgba(87, 199, 133, 1) 50%,
+		rgba(237, 221, 83, 1) 100%
+	);
+	max-width: 220px;
+	border-color: #2a7b9b;
+	border-radius: 0 20px;
+	border-width: 3px;
+}
+input:invalid + span::after {
+	color: red;
+	content: "✖";
+	padding-left: 6px;
+}
+
+input:valid + span::after {
+	color: green;
+	content: "✓";
+	padding-left: 6px;
+}
+input:invalid + .icon::after {
+	color: red;
+	content: "✖";
+	padding-left: 1px;
+}
+
+input:valid + .icon::after {
+	color: green;
+	content: "✓";
+	padding-left: 1px;
+}
