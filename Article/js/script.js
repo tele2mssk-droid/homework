@@ -22,7 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	// Клик по кнопке или по видео — просто просим сменить состояние
-	btn.addEventListener("click", togglePlaySafe);
+	btn.addEventListener("click", function () {
+	togglePlaySafe();
+	btn.blur();
+});
 	video.addEventListener("click", togglePlaySafe);
 
 	// Видимость кнопки зависит ТОЛЬКО от реального состояния видео
