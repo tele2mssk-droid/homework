@@ -1,0 +1,143 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+	min-height: 100vh;
+	animation: anim-form 1.2s ease-out;
+}
+
+.form {
+	border: 1px solid #333;
+	border-radius: 0 35px;
+	max-width: 400px;
+	width: 100%;
+	padding: 30px;
+}
+
+.form-group {
+	border: none;
+	padding: 0;
+}
+
+.form-group-title {
+	font-weight: 700;
+	padding: 0;
+	margin-bottom: 15px;
+}
+
+.label {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.textarea {
+	max-height: 150px;
+	min-height: 30px;
+	resize: vertical;
+}
+
+.input,
+.textarea {
+	border: 1px solid #333;
+	border-radius: 6px;
+	width: 100%;
+	padding: 5px 12px;
+	margin-bottom: 20px;
+	outline: none;
+}
+
+.input:disabled,
+.textarea:disabled {
+	opacity: 0.7;
+}
+
+.checkbox-label {
+	padding-left: 22px;
+}
+
+.checkbox {
+	position: absolute;
+	appearance: none;
+	cursor: pointer;
+	outline: none;
+}
+
+.checkbox::after {
+	position: absolute;
+	content: "";
+	width: 14px;
+	height: 14px;
+	margin-left: -22px;
+	border: 1px solid #333;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.checkbox:checked::after {
+	background:
+		url(../img/check.svg) no-repeat center,
+		linear-gradient(135deg, #ff4500 0%, #ff6347 50%, #ffa500 100%);
+	border: 0.2px solid transparent;
+}
+
+.checkbox:disabled::after {
+	content: "✖";
+	width: 13px;
+	height: 17px;
+	cursor: not-allowed;
+}
+
+.checkbox-text {
+	font-size: 14px;
+}
+
+.button {
+	border: none;
+	border-radius: 6px;
+	padding: 6px 18px;
+	background: linear-gradient(135deg, #ff4500 0%, #ff6347 50%, #ffa500 100%);
+	color: #fff;
+	cursor: pointer;
+	transition: opacity 0.2s;
+}
+
+.button:hover {
+	opacity: 0.85;
+}
+
+.button:not(:disabled):active {
+	background-color: #8719db;
+}
+
+.button:disabled {
+	opacity: 0.7;
+	cursor: not-allowed;
+}
+
+.checkbox:focus-visible::after,
+.input:focus-visible,
+.textarea:focus-visible,
+.button:focus-visible {
+	outline: 2px solid #ff4500;
+	outline-offset: 2px;
+}
+
+@keyframes anim-form {
+	from {
+		transform: scale(0.97);
+		opacity: 0;
+	}
+	80% {
+		transform: scale(0.97);
+		opacity: 0.3;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
