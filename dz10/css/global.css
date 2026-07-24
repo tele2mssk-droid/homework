@@ -1,0 +1,151 @@
+/* ОБЩИЕ СТИЛИ */
+html {
+	font-family: Ubuntu, sans-serif;
+	font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	margin: 0;
+}
+
+body,
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1250px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+/* СТИЛИ ДЛЯ ШАПКИ - header */
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #d3cbd9;
+}
+
+.phone {
+	text-align: right;
+}
+
+.phone-text {
+	font-weight: 300;
+	font-size: 14px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #858e8a;
+	margin-bottom: 8px;
+}
+
+.phone-number {
+	font-weight: 500;
+	font-size: 18px;
+	color: #2c332f;
+	transition: color 0.3s;
+}
+
+.phone-number:hover {
+	color: #3596ed;
+}
+
+/* СТИЛИ ДЛЯ ПОДВАЛА - footer */
+.footer {
+	margin-top: auto;
+	padding: 60px 0 40px;
+	background: linear-gradient(
+		90deg,
+		rgba(73, 169, 255, 0.2) 0%,
+		rgba(252, 124, 217, 0.2) 100%
+	);
+	text-align: center;
+}
+
+.footer-top {
+	margin-bottom: 40px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #d3cbd9;
+	min-width: 100%;
+}
+
+.logo-footer {
+	display: inline-block;
+	margin-bottom: 40px;
+}
+
+.menu ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 60px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu a {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 130%;
+	color: #535755;
+	transition: color 0.3s;
+}
+
+.menu a:hover {
+	color: #3596ed;
+}
+
+.footer-b p {
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 0.04em;
+	color: #858e8a;
+}
+
+.text-pp {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 130%;
+	color: #535755;
+}
+
+.section {
+	margin-bottom: 140px;
+}
+
+.article-title {
+	margin-bottom: 40px;
+	max-width: 596px;
+	font-family: Oswald, sans-serif;
+	font-weight: 600;
+	line-height: 115%;
+	text-transform: uppercase;
+	color: #2c332f;
+}
+
+.h1 {
+	font-size: 48px;
+}
