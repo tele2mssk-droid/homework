@@ -1,0 +1,158 @@
+.article {
+	padding-top: 80px;
+	padding-bottom: 120px;
+}
+
+.article__intro {
+	margin-bottom: 80px;
+}
+
+.article__intro-container {
+	margin-bottom: 80px;
+}
+
+.article__groups {
+	margin-bottom: 80px;
+}
+
+.article__media {
+	position: relative;
+}
+
+.article__media--intro::before {
+	left: 0;
+	top: 100px;
+}
+
+.article__media--video::before {
+	right: 0;
+	bottom: 136px;
+}
+
+.h2 {
+	font-size: 36px;
+}
+
+.article__text {
+	margin-bottom: 20px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 130%;
+	color: #535755;
+}
+
+.article__text:last-child {
+	margin-bottom: 0;
+}
+
+.article__text--mb {
+	margin-bottom: 80px;
+}
+
+.article__text--wide {
+	max-width: 744px;
+}
+
+.article__video {
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+	margin-bottom: 40px;
+}
+
+.article__list {
+	margin-top: 0;
+	padding-left: 18px;
+	margin-bottom: 80px;
+}
+
+.article__list-item:not(:last-child) {
+	margin-bottom: 12px;
+}
+
+.article__list-item::marker {
+	font-size: 22px;
+	color: #3596ed;
+}
+
+.article__video-wrapper video {
+	height: auto;
+	width: 100%;
+	display: block;
+}
+
+.article__video-wrapper {
+	position: relative;
+}
+
+.article__play-button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 90px;
+	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	z-index: 2;
+	transition: transform 0.3s;
+}
+
+.article__play-button:hover {
+	transform: translate(-50%, -50%) scale(1.5);
+}
+
+.article__play-icon circle {
+	transition: fill 0.25s;
+}
+
+.article__play-icon circle:hover {
+	fill: #68b9ff;
+}
+
+@media (width <= 768px) {
+	.article__media::before {
+		display: none;
+	}
+
+	.article-title {
+		font-size: 32px;
+		margin-bottom: 15px;
+	}
+
+	.article__intro,
+	.article__intro-container,
+	.article__groups {
+		margin-bottom: 50px;
+	}
+
+	.article__text--mb {
+		margin-bottom: 50px;
+	}
+}
+
+@media (width <= 576px) {
+	.article-title {
+		font-size: 28px;
+	}
+
+	.article {
+		padding-top: 55px;
+		padding-bottom: 80px;
+	}
+
+	.article__intro,
+	.article__intro-container,
+	.article__groups {
+		margin-bottom: 35px;
+	}
+
+	.article__text--mb {
+		margin-bottom: 35px;
+	}
+}
