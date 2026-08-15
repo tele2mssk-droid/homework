@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="page" lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dyson - Фен</title>
+		<link rel="stylesheet" href="./css/index.css" />
+	</head>
+	<body class="page__body">
+		<header class="header">
+			<div class="container header__container">
+				<button
+					class="header__burger burger"
+					aria-label="Открыть меню"
+					aria-expanded="false"
+					aria-controls="header__menu"
+				>
+					<svg class="burger__icon">
+						<use
+							class="burger__icon-menu"
+							href="./icons/sprite-header.svg#burger"
+						></use>
+						<use
+							class="burger__icon-cross"
+							href="./icons/sprite-header.svg#cross"
+						></use>
+					</svg>
+				</button>
+				<a class="header__logo" href="#">
+					<img
+						class="logo__img"
+						src="./icons/logo-icon.svg"
+						alt="Логотип компании Dyson"
+					/>
+				</a>
+				<nav
+					class="header__menu"
+					id="header__menu"
+					aria-label="Главное меню"
+				>
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a class="menu__link" href="#">О нас</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#">Доставка и оплата</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#">Регистрация продукта</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#">Сервис</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#">Сертификаты и лицензии</a>
+						</li>
+					</ul>
+				</nav>
+				<button class="header__cart" aria-label="Корзина">
+					<svg class="cart__icon">
+						<use
+							class="cart__icon-svg"
+							href="./icons/sprite-header.svg#cart"
+						></use>
+					</svg>
+				</button>
+			</div>
+		</header>
+		<script type="module" src="./js/index.js"></script>
+	</body>
+</html>
