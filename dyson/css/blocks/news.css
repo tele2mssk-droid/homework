@@ -1,0 +1,147 @@
+.news {
+	background: var(--main-color);
+}
+
+@media (width > 768px) {
+	.news {
+		padding-block: 150px;
+	}
+}
+
+@media (width <= 768px) {
+	.news {
+		padding-block: 60px;
+	}
+}
+
+@media (width <= 390px) {
+	.news {
+		padding-block: 45px;
+	}
+}
+
+.news__cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+@media (width <= 500px) {
+	.news__cards {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+	}
+}
+
+.news__card {
+	max-width: 440px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.news__name {
+	font-family: var(--second-family);
+	font-weight: 900;
+	color: var(--secondary-color);
+}
+
+@media (width > 768px) {
+	.news__name {
+		font-size: 42px;
+		margin-bottom: 70px;
+	}
+}
+
+@media (width <= 768px) {
+	.news__name {
+		font-size: 26px;
+		margin-bottom: 40px;
+	}
+}
+
+@media (width <= 390px) {
+	.news__name {
+		font-size: 20px;
+		margin-bottom: 30px;
+	}
+}
+
+.news__card-time {
+	font-weight: 300;
+	line-height: 150%;
+	color: #909090;
+}
+
+@media (width > 768px) {
+	.news__card-time {
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+}
+
+@media (width <= 768px) {
+	.news__card-time {
+		font-size: 12px;
+		margin-bottom: 8px;
+	}
+}
+
+.news__card-name {
+	font-weight: 600;
+	line-height: 120%;
+	color: var(--secondary-color);
+}
+
+@media (width > 768px) {
+	.news__card-name {
+		font-size: 20px;
+		margin-bottom: 15px;
+	}
+}
+
+@media (width <= 768px) {
+	.news__card-name {
+		font-size: 12px;
+		margin-bottom: 8px;
+	}
+}
+
+.news__card-p {
+	font-weight: 300;
+	line-height: 120%;
+	color: var(--secondary-color);
+}
+
+@media (width > 768px) {
+	.news__card-p {
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+}
+
+@media (width <= 768px) {
+	.news__card-p {
+		font-size: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+.news__card-button {
+	font-weight: 400;
+	color: var(--accent-color);
+	border-bottom: 1px solid var(--accent-color);
+}
+
+@media (width > 768px) {
+	.news__card-button {
+		font-size: 18px;
+	}
+}
+
+@media (width <= 768px) {
+	.news__card-button {
+		font-size: 12px;
+	}
+}

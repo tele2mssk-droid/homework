@@ -1,0 +1,261 @@
+.contacts {
+	background: var(--bg-color);
+}
+
+@media (width > 768px) {
+	.contacts {
+		padding-block: 150px;
+	}
+}
+
+@media (width <= 768px) {
+	.contacts {
+		padding-block: 60px;
+	}
+}
+
+@media (width <= 390px) {
+	.contacts {
+		padding-block: 45px;
+	}
+}
+
+.contacts__container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+@media (width > 768px) {
+	.contacts__container {
+		gap: 135px;
+	}
+}
+
+@media (width <= 768px) {
+	.contacts__container {
+		gap: 20px;
+	}
+}
+
+@media (width <= 590px) {
+	.contacts__container {
+		grid-template-columns: 1fr;
+		gap: 45px;
+	}
+}
+
+.contacts__form {
+	display: flex;
+	flex-direction: column;
+}
+
+.contacts__name {
+	font-family: var(--second-family);
+	font-weight: 900;
+	color: var(--secondary-color);
+}
+
+@media (width > 768px) {
+	.contacts__name {
+		margin-bottom: 50px;
+		font-size: 42px;
+	}
+}
+
+@media (width <= 768px) {
+	.contacts__name {
+		margin-bottom: 20px;
+		font-size: 20px;
+	}
+}
+
+.contacts__fields {
+	display: flex;
+	flex-direction: column;
+}
+
+@media (width > 768px) {
+	.contacts__fields {
+		gap: 40px;
+	}
+}
+
+@media (width <= 768px) {
+	.contacts__fields {
+		gap: 20px;
+	}
+}
+
+.contacts__input {
+	width: 100%;
+	font-family: inherit;
+	font-weight: 400;
+	color: var(--secondary-color);
+	background: none;
+	border: none;
+	border-bottom: 1px solid var(--disabled-color);
+	border-radius: 0;
+}
+
+.contacts__input:focus-visible {
+	outline: none;
+	border-bottom-color: var(--accent-color);
+}
+
+.contacts__input::placeholder {
+	color: var(--disabled-color);
+}
+
+@media (width > 768px) {
+	.contacts__input {
+		padding-bottom: 15px;
+		font-size: 18px;
+	}
+}
+
+@media (width <= 768px) {
+	.contacts__input {
+		padding-bottom: 7px;
+		font-size: 12px;
+	}
+}
+
+.contacts__button {
+	align-self: flex-start;
+	font-weight: 400;
+	color: var(--main-color);
+	background-color: var(--secondary-color);
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: background-color var(--transition-time);
+}
+
+@media (any-hover: hover) {
+	.contacts__button:hover {
+		background-color: var(--accent-color);
+	}
+}
+
+@media (width > 768px) {
+	.contacts__button {
+		margin-top: 70px;
+		padding: 16px 43px;
+		font-size: 24px;
+	}
+}
+
+@media (width <= 768px) {
+	.contacts__button {
+		margin-top: 40px;
+		padding: 7px 26px;
+		font-size: 15px;
+	}
+}
+
+.contacts__agree {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	cursor: pointer;
+}
+
+@media (width > 768px) {
+	.contacts__agree {
+		margin-top: 35px;
+	}
+}
+
+@media (width <= 768px) {
+	.contacts__agree {
+		margin-top: 27px;
+	}
+}
+
+@media (width <= 390px) {
+	.contacts__agree {
+		margin-top: 13px;
+	}
+}
+
+.contacts__checkbox {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip-path: inset(50%);
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.contacts__checkbox-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	border: 1px solid var(--secondary-color);
+	border-radius: 3px;
+}
+
+@media (width > 768px) {
+	.contacts__checkbox-box {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+@media (width <= 768px) {
+	.contacts__checkbox-box {
+		width: 19px;
+		height: 19px;
+	}
+}
+
+.contacts__checkbox:focus-visible + .contacts__checkbox-box {
+	outline: 1px solid var(--accent-color);
+	outline-offset: 3px;
+}
+
+.contacts__checkbox-icon {
+	fill: var(--accent-color);
+	opacity: 0;
+	transition: opacity var(--transition-time);
+}
+
+@media (width > 768px) {
+	.contacts__checkbox-icon {
+		width: 17px;
+		height: 11px;
+	}
+}
+
+@media (width <= 768px) {
+	.contacts__checkbox-icon {
+		width: 11px;
+		height: 7px;
+	}
+}
+
+.contacts__checkbox:checked + .contacts__checkbox-box .contacts__checkbox-icon {
+	opacity: 1;
+}
+
+.contacts__agree-text {
+	font-weight: 400;
+	line-height: 130%;
+	color: var(--secondary-color);
+}
+
+@media (width > 768px) {
+	.contacts__agree-text {
+		font-size: 16px;
+	}
+}
+
+@media (width <= 768px) {
+	.contacts__agree-text {
+		font-size: 10px;
+	}
+}

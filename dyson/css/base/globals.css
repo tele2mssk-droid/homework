@@ -1,0 +1,111 @@
+.page {
+	font-family: var(--font-family);
+	font-weight: 400;
+	color: var(--main-color);
+	scroll-behavior: smooth;
+	scroll-padding-top: 100px;
+}
+
+.page__body {
+	min-width: 390px;
+	min-height: 250vh;
+	background-color: var(--bg-color);
+}
+
+.page__body--no-scroll {
+	overflow: hidden;
+}
+
+.is-resizing *,
+.is-resizing *::before,
+.is-resizing *::after {
+	transition: none !important;
+}
+
+.container {
+	width: min(var(--container-width), 100% - var(--container-padding) * 2);
+	margin-inline: auto;
+}
+
+img {
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+	outline: 1px solid var(--accent-color);
+	outline-offset: 3px;
+	border-radius: 3px;
+}
+
+.button__show {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid var(--secondary-color);
+	border-radius: 3px;
+	margin-inline: auto;
+}
+
+@media (width > 768px) {
+	.button__show {
+		margin-top: 95px;
+		padding: 16px 49px;
+		gap: 30px;
+	}
+}
+
+@media (width <= 768px) {
+	.button__show {
+		margin-top: 40px;
+		padding: 9px 26px;
+		gap: 14px;
+	}
+}
+
+.button__show h3 {
+	font-weight: 400;
+	color: var(--secondary-color);
+}
+
+@media (width > 768px) {
+	.button__show h3 {
+		font-size: 24px;
+	}
+}
+
+@media (width <= 768px) {
+	.button__show h3 {
+		font-size: 16px;
+	}
+}
+
+.button__show img {
+	transition: transform var(--transition-time);
+}
+
+.button__show:active img {
+	transform: rotate(180deg);
+}
+
+@media (any-hover: hover) {
+	.button__show:hover img {
+		transform: rotate(180deg);
+	}
+}
+
+@media (width > 768px) {
+	.button__show img {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+@media (width <= 768px) {
+	.button__show img {
+		width: 23px;
+		height: 23px;
+	}
+}
